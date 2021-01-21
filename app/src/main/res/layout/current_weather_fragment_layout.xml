@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/current_visibility_imageView"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toStartOf="@+id/current_guide_vertical_35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/current_temp_textView"
+        tools:src="@drawable/ic_baseline_wb_sunny_24"
+        android:layout_marginStart="4dp"/>
+
+    <TextView
+        android:id="@+id/current_temp_textView"
+        android:layout_width="0dp"
+        android:layout_height="128dp"
+        android:gravity="center"
+        android:textSize="96sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/current_guide_vertical_35"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="4dp"
+        tools:text="100" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/current_guide_vertical_35"
+        app:layout_constraintTop_toBottomOf="@id/current_visibility_imageView"
+        app:layout_constraintBottom_toBottomOf="@id/current_temp_textView"
+        android:layout_marginStart="4dp">
+
+        <ImageView
+            android:id="@+id/current_rain_label"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/current_high_low_separator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/current_high_low_separator"
+            app:layout_constraintWidth_percent=".5"
+            android:src="@drawable/ic_baseline_cloud_24"
+            />
+
+        <TextView
+            android:id="@+id/current_rain_value_textView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@id/current_rain_label"
+            app:layout_constraintEnd_toEndOf="@id/current_rain_label"
+            app:layout_constraintTop_toBottomOf="@id/current_rain_label"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"
+            tools:text="100%" />
+
+        <TextView
+            android:id="@+id/current_high_label"
+            android:layout_width="16dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="@id/current_high_low_separator"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@id/current_high_low_separator"
+            android:text="@string/temp_high_label" />
+
+        <TextView
+            android:id="@+id/current_high_temp_textView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@id/current_high_low_separator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/current_high_label"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="100" />
+
+        <View
+            android:id="@+id/current_high_low_separator"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/current_rain_label"
+            android:background="@color/black"
+
+            app:layout_constraintWidth_percent=".5"/>
+
+        <TextView
+            android:id="@+id/current_low_label"
+            android:layout_width="16dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="@id/current_high_low_separator"
+            app:layout_constraintTop_toBottomOf="@id/current_high_low_separator"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:text="@string/temp_low_label" />
+
+        <TextView
+            android:id="@+id/current_low_temp_textView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toEndOf="@id/current_low_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/current_high_low_separator"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"
+            tools:text="99" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/current_guide_vertical_35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

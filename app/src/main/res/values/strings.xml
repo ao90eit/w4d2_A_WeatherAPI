@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">w4d2_A_WeatherAPI</string>
+    <string name="temp_f">F</string>
+    <string name="temp_c">C</string>
+    <string name="temp_low_label">L</string>
+    <string name="temp_high_label">H</string>
 </resources>
