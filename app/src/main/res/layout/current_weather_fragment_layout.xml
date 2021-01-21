@@ -5,6 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/current_guide_vertical_35"
+        app:layout_constraintBottom_toTopOf="@id/current_visibility_imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/current_weather_header"
+        android:layout_marginStart="16dp"/>
+
     <ImageView
         android:id="@+id/current_visibility_imageView"
         android:layout_width="0dp"
@@ -61,7 +71,7 @@
             tools:text="100%" />
 
         <TextView
-            android:id="@+id/current_high_label"
+            android:id="@+id/daily_high_label"
             android:layout_width="16dp"
             android:layout_height="0dp"
             android:layout_marginStart="16dp"
@@ -79,7 +89,7 @@
             android:gravity="center"
             app:layout_constraintBottom_toBottomOf="@id/current_high_low_separator"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/current_high_label"
+            app:layout_constraintStart_toEndOf="@+id/daily_high_label"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="100" />
 

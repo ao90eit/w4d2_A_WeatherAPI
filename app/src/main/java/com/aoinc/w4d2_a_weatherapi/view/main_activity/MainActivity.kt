@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     )
 
     private val currentWeatherFragment: CurrentWeatherFragment = CurrentWeatherFragment()
+    private val weekForecastFragment: WeekForecastFragment = WeekForecastFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +35,7 @@ class MainActivity : AppCompatActivity() {
                 exclude = "minutely,hourly,alerts", units ="imperial")
 
         addFragment(R.id.current_weather_frame, currentWeatherFragment)
+        addFragment(R.id.week_forecast_frame, weekForecastFragment)
     }
 
     private fun getForecast(latitude: String, longitude: String,
