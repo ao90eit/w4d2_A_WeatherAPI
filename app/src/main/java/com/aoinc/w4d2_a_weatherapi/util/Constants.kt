@@ -13,5 +13,8 @@ class Constants {
         const val EXCLUDE_KEY = "exclude"
         const val UNITS_KEY = "units"
         const val LANG_KEY = "lang"
+
+
+        const val VISIBILITY_ICON_URL = "https://openweathermap.org/img/wn/%s@4x.png"
     }
 }

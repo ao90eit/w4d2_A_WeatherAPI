@@ -3,6 +3,7 @@ package com.aoinc.w4d2_a_weatherapi.view.main_activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -20,19 +21,22 @@ class MainActivity : AppCompatActivity() {
     private val currentWeatherFragment: CurrentWeatherFragment = CurrentWeatherFragment()
     private val weekForecastFragment: WeekForecastFragment = WeekForecastFragment()
 
+    private lateinit var locationTextView: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        forecastViewModel.forecastData.observe(this, Observer {
-            Log.d("weather_forecast", "Forecast returned...\n$it")
-        })
+        locationTextView = findViewById(R.id.location_textView)
 
         // TEST OPEN WEATHER REQUEST
 //        getForecast(latitude = "33.908951", longitude = "-84.4789859",
 //                exclude = "minutely,hourly,alerts", units = "metric", lang = "es")
         getForecast(latitude = "33.908951", longitude = "-84.4789859",
                 exclude = "minutely,hourly,alerts", units ="imperial")
+
+        locationTextView.text = "Marietta, Georgia - USA"
+        // END TEST
 
         addFragment(R.id.current_weather_frame, currentWeatherFragment)
         addFragment(R.id.week_forecast_frame, weekForecastFragment)

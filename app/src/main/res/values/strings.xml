@@ -4,5 +4,5 @@
     <string name="temp_c">C</string>
     <string name="temp_low_label">L</string>
     <string name="temp_high_label">H</string>
-    <string name="current_weather_header">Current</string>
+    <string name="current_weather_header">Currently</string>
 </resources>
